@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Grok%20Build-MCP-111114?style=flat-square" alt="Grok Build MCP">
 </p>
 
-Chrome extension that lets **[Grok Build](https://grok.x.ai)** attach to **this Chrome profile** — the one where you mark the extension **Active** — instead of launching an empty isolated browser.
+Chrome extension that lets **[Grok Build](https://x.ai/build)** attach to **this Chrome profile** — the one where you mark the extension **Active** — instead of launching an empty isolated browser.
 
 Grok then sees that profile’s tabs, cookies, and logins.
 
