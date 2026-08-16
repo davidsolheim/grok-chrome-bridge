@@ -1,0 +1,34 @@
+name: Bug report
+description: Something doesn't connect or behave as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste cookies, tokens, or browsing history.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      placeholder: Popup status, --status output (redact paths if you want), and what you expected.
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version
+      placeholder: "e.g. 144"
+  - type: input
+    id: os
+    attributes:
+      label: macOS version
+      placeholder: "e.g. 15.5"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Already tried
+      options:
+        - label: Reloaded the unpacked extension after `./scripts/install.sh`
+        - label: Enabled chrome://inspect/#remote-debugging
+        - label: Marked this profile Active
+        - label: Restarted Grok Build

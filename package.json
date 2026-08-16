@@ -1,0 +1,17 @@
+{
+  "name": "grok-chrome-bridge",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "David Solheim",
+  "type": "module",
+  "description": "Connect Grok Build to the Chrome profile where this extension is marked active.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidsolheim/grok-chrome-bridge.git"
+  },
+  "scripts": {
+    "test": "python3 tests/test_native_host.py && node tests/test_mcp_wrapper.mjs",
+    "install-host": "./scripts/install.sh",
+    "status": "node mcp/grok-chrome-mcp.mjs --status"
+  }
+}

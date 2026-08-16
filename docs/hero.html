@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Grok Chrome Bridge</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 1280px;
+        height: 640px;
+        overflow: hidden;
+        background: #0c0c0f;
+        color: #f4f4f5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:
+          radial-gradient(900px 420px at 18% 20%, rgba(61, 214, 140, 0.12), transparent 55%),
+          radial-gradient(700px 360px at 88% 80%, rgba(255, 255, 255, 0.04), transparent 50%),
+          #0c0c0f;
+      }
+      .wrap {
+        width: 1080px;
+        display: flex;
+        align-items: center;
+        gap: 48px;
+      }
+      img.icon {
+        width: 168px;
+        height: 168px;
+        border-radius: 38px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        flex: 0 0 auto;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 56px;
+        letter-spacing: -0.04em;
+        font-weight: 700;
+      }
+      p {
+        margin: 0 0 28px;
+        font-size: 24px;
+        line-height: 1.35;
+        color: #b8b8c0;
+        max-width: 720px;
+      }
+      .pills {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .pill {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #d4d4d8;
+      }
+      .pill.ok {
+        border-color: rgba(61, 214, 140, 0.35);
+        color: #3dd68c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <img class="icon" src="../extension/icons/icon128.png" alt="" />
+      <div>
+        <h1>Grok Chrome Bridge</h1>
+        <p>Point Grok Build at the Chrome profile you mark Active — real tabs, cookies, and logins.</p>
+        <div class="pills">
+          <span class="pill ok">Active toggle</span>
+          <span class="pill">Chrome 144+</span>
+          <span class="pill">Native host</span>
+          <span class="pill">MIT</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

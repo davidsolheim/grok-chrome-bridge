@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Grok Chrome Bridge",
+  "version": "1.0.0",
+  "description": "Mark this Chrome profile as the one Grok Build should control.",
+  "minimum_chrome_version": "144",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8CTGemgFljmYIFfmxFt0mp11H5kkZBhYj3IFrALXteEui21s2LdlCLwSSSRBVtxiR+5pqI7Hx/8IC4F9X312rUVOuzs9P4JVHeaoyJgoH/4a8XTfz+jbRdf3uKIN7A1mkMiL+FX5VgL7ydx0haFGMo+cP8tnIKc4XZbirS4ixWHNIjK+R4+dLRZmd/U1x3AMPw9aPuMxKM9IyhRJpvVk7tq5P9z61dHT8UdLNi8h8pk+h74ey4zSbEniF1vFQOj4HF4cPas8mVeDLV9c+cdT71iIuRT8KEyU8HGAbs/ki0HMAoCB6etfxQhT9el+jib25TaCMObVR0BCVIiAUpptQIDAQAB",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "alarms",
+    "nativeMessaging"
+  ],
+  "action": {
+    "default_title": "Grok Chrome Bridge",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

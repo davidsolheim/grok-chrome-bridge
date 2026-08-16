@@ -1,0 +1,237 @@
+:root {
+  color-scheme: dark;
+  --bg: #111114;
+  --card: #1a1a1f;
+  --fg: #f4f4f5;
+  --muted: #9b9ba3;
+  --line: rgba(255, 255, 255, 0.08);
+  --ok: #3dd68c;
+  --warn: #f5c14a;
+  --danger: #ff6b6b;
+  --accent: #f4f4f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 360px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.brand img {
+  border-radius: 7px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.sub {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+main {
+  padding: 12px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+}
+
+.row + .row {
+  border-top: 1px solid var(--line);
+}
+
+.k {
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.v {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.mono {
+  font: 11px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.track {
+  width: 36px;
+  height: 20px;
+  border-radius: 999px;
+  background: #2c2c33;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #d4d4d8;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.switch input:checked + .track {
+  background: #2f6f4e;
+}
+
+.switch input:checked + .track::after {
+  transform: translateX(16px);
+  background: var(--ok);
+}
+
+.switch-label {
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--muted);
+  min-width: 52px;
+}
+
+.switch:has(input:checked) .switch-label {
+  color: var(--ok);
+}
+
+.banner {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(245, 193, 74, 0.12);
+  color: var(--warn);
+  font-size: 12px;
+}
+
+.banner.error {
+  background: rgba(255, 107, 107, 0.12);
+  color: var(--danger);
+}
+
+.banner.ok {
+  background: rgba(61, 214, 140, 0.12);
+  color: var(--ok);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: inherit;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+ul {
+  list-style: none;
+  margin: 6px 0 2px;
+  padding: 0;
+  max-height: 140px;
+  overflow: auto;
+}
+
+li {
+  padding: 4px 0;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+li strong {
+  color: var(--fg);
+  font-weight: 550;
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.ok {
+  color: var(--ok);
+}
+
+.warn {
+  color: var(--warn);
+}
+
+.err {
+  color: var(--danger);
+}

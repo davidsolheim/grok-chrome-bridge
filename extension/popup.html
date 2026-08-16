@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Grok Chrome Bridge</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img src="icons/icon48.png" width="28" height="28" alt="" />
+        <div>
+          <h1>Grok Chrome Bridge</h1>
+          <p class="sub">This profile talks to Grok Build</p>
+        </div>
+      </div>
+      <label class="switch" title="Mark this Chrome profile as the one Grok should use">
+        <input id="active" type="checkbox" />
+        <span class="track"></span>
+        <span class="switch-label" id="activeLabel">Inactive</span>
+      </label>
+    </header>
+
+    <main>
+      <section class="card" id="statusCard">
+        <div class="row">
+          <span class="k">Profile</span>
+          <span class="v" id="profile">—</span>
+        </div>
+        <div class="row">
+          <span class="k">Remote debugging</span>
+          <span class="v" id="debug">—</span>
+        </div>
+        <div class="row">
+          <span class="k">Discovery</span>
+          <span class="v" id="discovery">—</span>
+        </div>
+        <div class="row">
+          <span class="k">Endpoint</span>
+          <span class="v mono" id="endpoint">—</span>
+        </div>
+      </section>
+
+      <p class="banner" id="banner" hidden></p>
+
+      <div class="actions">
+        <button type="button" class="primary" id="openDebug">
+          Open chrome://inspect
+        </button>
+        <button type="button" id="refresh">Refresh</button>
+      </div>
+
+      <section class="card tabs-card">
+        <div class="row">
+          <span class="k">Tabs in this profile</span>
+          <span class="v" id="tabCount">0</span>
+        </div>
+        <ul id="tabs"></ul>
+      </section>
+
+      <p class="hint">
+        Enable remote debugging on
+        <span class="mono">chrome://inspect/#remote-debugging</span>,
+        click Allow when Grok connects, then keep this toggle Active.
+        Only one profile should be Active at a time.
+      </p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

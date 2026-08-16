@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+*.pem
+*.key
+.env
+.env.*
+chrome-bridge.json
+extension/icons/icon-source.png
+.grok/
+*.log
